@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llaveros Personalizados de Resina</title>
+    <style>
+        /* Paleta de colores suavizada: Rosa claro (#FFB6C1), rosa medio (#FF69B4) solo en acentos, rosa oscuro (#DC143C) en hovers, blanco (#FFFFFF) dominante, fondo sutil (#FFF8F8) */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF8F8; /* Fondo sutil rosa pálido */
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(to right, #FFB6C1, #FFFFFF); /* Gradiente suave rosa claro a blanco */
+            color: #333; /* Texto oscuro para contraste */
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #FF69B4; /* Rosa medio sutil */
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        nav {
+            background-color: #FFB6C1; /* Rosa claro suave */
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        nav a {
+            color: #333; /* Texto oscuro */
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #FF69B4; /* Rosa medio en hover */
+        }
+        .section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #FFFFFF; /* Blanco para secciones */
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            text-align: center;
+            color: #FFB6C1; /* Rosa claro */
+            margin-bottom: 20px;
+        }
+        /* Carrusel general */
+        .carousel {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .carousel-container {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .carousel img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        .carousel button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 182, 193, 0.8); /* Rosa claro transparente */
+            color: #333;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 1.5em;
+        }
+        .carousel .prev {
+            left: 10px;
+        }
+        .carousel .next {
+            right: 10px;
+        }
+        /* Indicadores (dots) */
+        .carousel-dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .carousel-dots button {
+            background-color: #FFB6C1; /* Rosa claro */
+            border: none;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .carousel-dots button.active {
+            background-color: #FF69B4; /* Rosa medio para activo */
+        }
+        /* Galería estática para productos */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .gallery .product {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .gallery .product:hover {
+            transform: scale(1.05);
+        }
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .gallery button {
+            background-color: #FFB6C1; /* Rosa claro */
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .gallery button:hover {
+            background-color: #FF69B4; /* Rosa medio */
+        }
+        .contact-section {
+            text-align: center;
+            padding: 20px;
+        }
+        .contact-section a {
+            color: #FF69B4; /* Rosa medio */
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .contact-section a:hover {
+            color: #DC143C; /* Rosa oscuro */
+        }
+        footer {
+            background-color: #FFB6C1; /* Rosa claro */
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🌸 Luna Mia 🌸</h1>
+        <p>Llaveros Personalizados de Resina</p>
+    </header>
+    
+    <nav>
+        <a href="#productos">Nuestros Llaveros</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">¡Hablemos!</a>
+    </nav>
+    
+    <section id="productos" class="section">
+        <h2>✨ Nuestros Llaveros ✨</h2>
+        <p>¡Mira estos lindos llaveros ya hechos! Cada uno es único y perfecto para regalar o para ti. ¿Ves algo que te guste? ¡Personalízalo a tu gusto! 💖</p>
+        <div class="carousel">
+            <div class="carousel-container" id="product-carousel-container">
+                <img src="https://images.unsplash.com/photo-1606788075819-c2d3827d0ce5?w=600" alt="Llaveros personalizados">
+                <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=600" alt="Llaveros personalizados">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600" alt="Llaveros personalizados">
+                <!-- Agrega más imágenes aquí copiando la línea <img> de arriba -->
+            </div>
+            <button class="prev" onclick="prevSlide('product')">&#10094;</button>
+            <button class="next" onclick="nextSlide('product')">&#10095;</button>
+        </div>
+        <div class="carousel-dots" id="product-dots">
+            <button onclick="goToSlide('product', 0)" class="active"></button>
+            <button onclick="goToSlide('product', 1)"></button>
+            <button onclick="goToSlide('product', 2)"></button>
+            <!-- Agrega más dots aquí si añades más imágenes -->
+        </div>
+        <div class="gallery">
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1606788075819-c2d3827d0ce5?w=200" alt="Llaveros personalizados">
+                <h3>Llavero Floral 🌸</h3>
+                <p>Precio: $5.00 – ¡Ideal para amantes de la naturaleza!</p>
+                <button onclick="window.location.href='#contacto'">¡Quiero este! 💕</button>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=200" alt="Llaveros personalizados">
+                <h3>Llavero Animal 🐾</h3>
+                <p>Precio: $6.00 – ¡Para los fans de los animalitos!</p>
+                <button onclick="window.location.href='#contacto'">¡Me encanta! 💕</button>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200" alt="Llaveros personalizados">
+                <h3>Llavero Geométrico 🔺</h3>
+                <p>Precio: $4.50 – ¡Moderno y chic!</p>
+                <button onclick="window.location.href='#contacto'">¡Lo quiero! 💕</button>
+            </div>
+            <!-- Agrega más productos aquí copiando el div .product de arriba -->
+        </div>
+    </section>
+    
+    <section id="galeria" class="section">
+        <h2>🎨 Galería de Inspiración 🎨</h2>
+        <p>¡Explora más ideas para tu llavero personalizado! Desliza para ver más y déjate inspirar. ¿Tienes una foto favorita? ¡Cuéntanos! 📸</p>
+        <div class="carousel">
+            <div class="carousel-container" id="inspiration-carousel-container">
+                <img src="https://images.unsplash.com/photo-1606788075819-c2d3827d0ce5?w=600" alt="Llaveros personalizados">
+                <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=600" alt="Llaveros personalizados">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600" alt="Llaveros personalizados">
+                <!-- Agrega más imágenes aquí copiando la línea <img> de arriba -->
+            </div>
+            <button class="prev" onclick="prevSlide('inspiration')">&#10094;</button>
+            <button class="next" onclick="nextSlide('inspiration')">&#10095;</button>
+        </div>
+        <div class="carousel-dots" id="inspiration-dots">
+            <button onclick="goToSlide('inspiration', 0)" class="active"></button>
+            <button onclick="goToSlide('inspiration', 1)"></button>
+            <button onclick="goToSlide('inspiration', 2)"></button>
+            <!-- Agrega más dots aquí si añades más imágenes -->
+        </div>
+    </section>
+    
+    <section id="contacto" class="section">
+        <div class="contact-section">
+            <h2>💌 ¡Hablemos de tu Llaveros! 💌</h2>
+            <p>¿Tienes una idea genial? ¡Llámanos directamente y hagamos magia juntos! Estamos emocionados por escucharte. 😄</p>
+            <a href="tel:+123456789">📞 Llámanos al: +123 456 789</a>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 Llaveros de Resina. ¡Gracias por visitarnos! 🌸 Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // JavaScript para los carruseles con dots
+        function createCarousel(containerId, dotsId, type) {
+            let currentIndex = 0;
+            const container = document.getElementById(containerId);
+            const slides = container.querySelectorAll('img');
+            const totalSlides = slides.length;
+            const dots = document.getElementById(dotsId).querySelectorAll('button');
+
+            function showSlide(index) {
+                container.style.transform = `translateX(-${index * 100}%)`;
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === index);
+                });
+            }
+
+            window[`nextSlide${type}`] = function() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                showSlide(currentIndex);
+            };
+
+            window[`prevSlide${type}`] = function() {
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                showSlide(currentIndex);
+            };
+
+            window[`goToSlide${type}`] = function(index) {
+                currentIndex = index;
+                showSlide(currentIndex);
+            };
+
+            // Auto-play opcional (cada 5 segundos)
+            setInterval(window[`nextSlide${type}`], 5000);
+        }
+
+        createCarousel('product-carousel-container', 'product-dots', 'product');
+        createCarousel('inspiration-carousel-container', 'inspiration-dots', 'inspiration');
+    </script>
+</body>
+</html>
