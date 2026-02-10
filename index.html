@@ -91,6 +91,10 @@
             border-radius: 50%;
             font-size: 1.5em;
         }
+        .carousel button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
         .carousel .prev {
             left: 10px;
         }
@@ -193,37 +197,37 @@
         <p>¡Mira estos lindos llaveros ya hechos! Cada uno es único y perfecto para regalar o para ti. ¿Ves algo que te guste? ¡Personalízalo a tu gusto! 💖</p>
         <div class="carousel">
             <div class="carousel-container" id="product-carousel-container">
-                <img src="https://images.unsplash.com/photo-1606788075819-c2d3827d0ce5?w=600" alt="Llaveros personalizados">
-                <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=600" alt="Llaveros personalizados">
-                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600" alt="Llaveros personalizados">
+                <img src="foto 1.jpeg" alt="Llaveros personalizados">
+                <img src="foto2.jpeg" alt="Llaveros personalizados">
+                <img src="foto3.jpeg" alt="Llaveros personalizados">
+                <img src="f11.png" alt="Llaveros personalizados">
+                  <img src="D12.png" alt="Llaveros personalizados">
                 <!-- Agrega más imágenes aquí copiando la línea <img> de arriba -->
             </div>
-            <button class="prev" onclick="prevSlide('product')">&#10094;</button>
-            <button class="next" onclick="nextSlide('product')">&#10095;</button>
+            <button class="prev" onclick="prevSlide_product()">&#10094;</button>
+            <button class="next" onclick="nextSlide_product()">&#10095;</button>
         </div>
         <div class="carousel-dots" id="product-dots">
-            <button onclick="goToSlide('product', 0)" class="active"></button>
-            <button onclick="goToSlide('product', 1)"></button>
-            <button onclick="goToSlide('product', 2)"></button>
+            <button onclick="goToSlide_product(0)" class="active"></button>
+            <button onclick="goToSlide_product(1)"></button>
+            <button onclick="goToSlide_product(2)"></button>
+            
             <!-- Agrega más dots aquí si añades más imágenes -->
         </div>
         <div class="gallery">
             <div class="product">
-                <img src="https://images.unsplash.com/photo-1606788075819-c2d3827d0ce5?w=200" alt="Llaveros personalizados">
-                <h3>Llavero Floral 🌸</h3>
-                <p>Precio: $5.00 – ¡Ideal para amantes de la naturaleza!</p>
+                <img src="foto6.jpeg" alt="Llaveros personalizados">
+                <h3>Personalizado 🌸</h3>
                 <button onclick="window.location.href='#contacto'">¡Quiero este! 💕</button>
             </div>
             <div class="product">
-                <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=200" alt="Llaveros personalizados">
-                <h3>Llavero Animal 🐾</h3>
-                <p>Precio: $6.00 – ¡Para los fans de los animalitos!</p>
+                <img src="foto7.jpeg" alt="Llaveros personalizados">
+                <h3>Llavero Cumpleaños 🎂</h3>
                 <button onclick="window.location.href='#contacto'">¡Me encanta! 💕</button>
             </div>
             <div class="product">
-                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200" alt="Llaveros personalizados">
-                <h3>Llavero Geométrico 🔺</h3>
-                <p>Precio: $4.50 – ¡Moderno y chic!</p>
+                <img src="foto5.jpeg" alt="Llaveros personalizados">
+                <h3>Llavero Dedicado ❤️</h3>
                 <button onclick="window.location.href='#contacto'">¡Lo quiero! 💕</button>
             </div>
             <!-- Agrega más productos aquí copiando el div .product de arriba -->
@@ -235,18 +239,21 @@
         <p>¡Explora más ideas para tu llavero personalizado! Desliza para ver más y déjate inspirar. ¿Tienes una foto favorita? ¡Cuéntanos! 📸</p>
         <div class="carousel">
             <div class="carousel-container" id="inspiration-carousel-container">
-                <img src="https://images.unsplash.com/photo-1606788075819-c2d3827d0ce5?w=600" alt="Llaveros personalizados">
-                <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=600" alt="Llaveros personalizados">
-                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600" alt="Llaveros personalizados">
+                <img src="foto4.jpeg" alt="Llaveros personalizados">
+                <img src="foto8.jpeg" alt="Llaveros personalizados">
+                <img src="f9.jpeg" alt="Llaveros personalizados">
+                <img src="f10.jpeg" alt="Llaveros personalizados">
+              <img src="foto3.jpeg" alt="Llaveros personalizados">
+
                 <!-- Agrega más imágenes aquí copiando la línea <img> de arriba -->
             </div>
-            <button class="prev" onclick="prevSlide('inspiration')">&#10094;</button>
-            <button class="next" onclick="nextSlide('inspiration')">&#10095;</button>
+            <button class="prev" onclick="prevSlide_inspiration()">&#10094;</button>
+            <button class="next" onclick="nextSlide_inspiration()">&#10095;</button>
         </div>
         <div class="carousel-dots" id="inspiration-dots">
-            <button onclick="goToSlide('inspiration', 0)" class="active"></button>
-            <button onclick="goToSlide('inspiration', 1)"></button>
-            <button onclick="goToSlide('inspiration', 2)"></button>
+            <button onclick="goToSlide_inspiration(0)" class="active"></button>
+            <button onclick="goToSlide_inspiration(1)"></button>
+            <button onclick="goToSlide_inspiration(2)"></button>
             <!-- Agrega más dots aquí si añades más imágenes -->
         </div>
     </section>
@@ -255,47 +262,60 @@
         <div class="contact-section">
             <h2>💌 ¡Hablemos de tu Llaveros! 💌</h2>
             <p>¿Tienes una idea genial? ¡Llámanos directamente y hagamos magia juntos! Estamos emocionados por escucharte. 😄</p>
-            <a href="tel:+123456789">📞 Llámanos al: +123 456 789</a>
+            <a href="tel:+123456789">📞 Llámanos al: +54 9 3883 10-5820</a>
         </div>
     </section>
     
     <footer>
-        <p>&copy; 2023 Llaveros de Resina. ¡Gracias por visitarnos! 🌸 Todos los derechos reservados.</p>
+        <p>&copy; 2026 Llaveros de Resina. ¡Gracias por visitarnos! 🌸 Todos los derechos reservados.</p>
     </footer>
 
     <script>
-        // JavaScript para los carruseles con dots
+        // JavaScript para los carruseles sin ciclo infinito, con botones deshabilitados al llegar a los extremos
         function createCarousel(containerId, dotsId, type) {
             let currentIndex = 0;
             const container = document.getElementById(containerId);
             const slides = container.querySelectorAll('img');
             const totalSlides = slides.length;
             const dots = document.getElementById(dotsId).querySelectorAll('button');
+            const prevBtn = container.parentElement.querySelector('.prev');
+            const nextBtn = container.parentElement.querySelector('.next');
 
             function showSlide(index) {
                 container.style.transform = `translateX(-${index * 100}%)`;
                 dots.forEach((dot, i) => {
                     dot.classList.toggle('active', i === index);
                 });
+                prevBtn.disabled = index === 0;
+                nextBtn.disabled = index === totalSlides - 1;
             }
 
-            window[`nextSlide${type}`] = function() {
-                currentIndex = (currentIndex + 1) % totalSlides;
-                showSlide(currentIndex);
-            };
+            function nextSlide() {
+                if (currentIndex < totalSlides - 1) {
+                    currentIndex++;
+                    showSlide(currentIndex);
+                }
+            }
 
-            window[`prevSlide${type}`] = function() {
-                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-                showSlide(currentIndex);
-            };
+            function prevSlide() {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    showSlide(currentIndex);
+                }
+            }
 
-            window[`goToSlide${type}`] = function(index) {
+            function goToSlide(index) {
                 currentIndex = index;
                 showSlide(currentIndex);
-            };
+            }
 
-            // Auto-play opcional (cada 5 segundos)
-            setInterval(window[`nextSlide${type}`], 5000);
+            // Asignar funciones globales
+            window[`nextSlide_${type}`] = nextSlide;
+            window[`prevSlide_${type}`] = prevSlide;
+            window[`goToSlide_${type}`] = goToSlide;
+
+            // Inicializar
+            showSlide(0);
         }
 
         createCarousel('product-carousel-container', 'product-dots', 'product');
